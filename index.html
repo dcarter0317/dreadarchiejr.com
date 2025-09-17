@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dread Archie Jr.com</title>
+  <meta name="description" content="Official site for Dread Archie Jr: bio, tour dates, videos, flyers, and booking." />
+  <meta name="theme-color" content="#0b0b10" />
+
+  <!-- Typography: Sora (display) + IBM Plex Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script defer src="js/script.js"></script>
+</head>
+<body class="no-js">
+  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <img class="logo" src="https://dcartdevelopment.com/dreadarchiejr/assets/imgs/logo.png" alt="site_logo">
+      </a>
+
+      <!-- Hamburger -->
+      <button class="mobile-toggle" id="mobileToggle"
+        aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#filmography">Filmography</a></li>
+          <li><a href="#shows">Shows</a></li>
+          <li><a href="#flyers">Flyers</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#newsletter">Mailing List</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="toggle" aria-label="Toggle theme">☀️ Light</button>
+        <a class="btn primary" href="#shows">Get Tickets</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileMenu" class="mobile-drawer" hidden>
+    <div class="mobile-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+      <header class="mobile-head">
+        <button class="btn ghost" id="mobileClose" aria-label="Close menu">✕</button>
+      </header>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a class="mobile-link" href="#bio">Bio</a></li>
+          <li><a class="mobile-link" href="#shows">Shows</a></li>
+          <li><a class="mobile-link" href="#flyers">Flyers</a></li>
+          <li><a class="mobile-link" href="#videos">Videos</a></li>
+          <li><a class="mobile-link" href="#newsletter">Mailing List</a></li>
+        </ul>
+      </nav>
+      <a class="btn primary" href="#shows">Get Tickets</a>
+      <a class="btn ghost" href="https://dcartdevelopment.com/dreadarchiejr/assets/Dread_Archie_Jr_EPK.pdf" target="_blank" rel="noopener">Download EPK</a>
+      <div class="chips">
+        <a class="chip" href="https://www.instagram.com/da_kontrol_room_" target="_blank" rel="noopener">Instagram</a>
+        <a class="chip" href="https://www.tiktok.com/@dakontrolroom?lang=en" target="_blank" rel="noopener">TikTok</a>
+        <a class="chip" href="https://www.youtube.com/@dakontrolroom8920" target="_blank" rel="noopener">YouTube</a>
+        <a class="chip" href="https://x.com/archiedread" target="_blank" rel="noopener">Twitter/X</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="main" tabindex="-1">
+    <section id="top" class="hero" aria-label="Intro">
+      <div class="layer blobs" data-depth="0.15"></div>
+      <div class="layer grid" data-depth="0.25"></div>
+      <div class="layer stars" data-depth="0.35"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Who is Dread Archie Jr.?</h1>
+          <p class="lead">Known for his — razor-sharp storytelling and crowd-work chaos. Grab a seat to see him before it sells out.</p>
+          <div class="row row-center">
+            <a class="btn primary" href="#shows">See Dates</a>
+            <a class="btn ghost" href="#videos">Watch Clips</a>
+          </div>
+          <div class="poster-wrap" aria-hidden="true">
+            <div class="poster" data-depth="0.18">
+              <img src="https://dcartdevelopment.com/dreadarchiejr/assets/imgs/hero.jpg" alt="On-stage poster">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <section id="bio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bio</h2>
+          <span class="note">Based in NYC</span>
+        </div>
+        <p class="note">Comedian, Actor, Vocal Percussionist</p>
+        <div class="bio">
+          <div class="tile">
+            <img src="https://dcartdevelopment.com/dreadarchiejr/assets/imgs/‭bio2.jpg" alt="Headshot"> 
+          </div>
+          <div class="card content">
+            <p><strong>Dread Archie Jr.</strong>—also known as <strong>DOA</strong> and performing under the alias <strong>Da Kontrol Room</strong>—is a multi-talented entertainer hailing from Staten Island, New York. With roots in vocal percussion, beatboxing, acting, and comedy, he’s carved out a dynamic career that bridges classic hip hop expression and modern performance artistry.</p>
+
+            <p>Dread first gained national attention after starring in a <strong>Wrigley’s Winterfresh gum commercial</strong>, a breakout opportunity that earned him membership in the <strong>Screen Actors Guild (SAG-AFTRA)</strong>. That early gig opened doors into mainstream media and advertising, with his beatboxing featured prominently in the campaign—a rare and innovative use of vocal percussion in early 2000s television ads.</p>
+
+            <p>In 2002, he was featured in the documentary “<strong>Breath Control: The History of the Human Beat Box</strong>,” showcasing his mastery as a vocal percussionist and placing him alongside pioneers of the art form. His performance was recognized as one of the standout moments in the film, which has since become a cult classic among hip hop and music documentary fans.</p>
+
+            <p>A graduate of the <strong>William Esper Studio</strong>, Dread is classically trained in acting and continues to work in film and television. His comedy persona, <strong>Da Kontrol Room</strong>, blends observational humor, music, and streetwise storytelling. Through his Instagram page <a href="https://www.instagram.com/da_kontrol_room_/?hl=en" target="_blank" rel="noopener">@da_kontrol_room</a>, he posts original skits, beatboxing routines, and promotional content for his live appearances.</p>
+
+            <p>He is a regular host and performer at events across the East Coast, with recent credits including comedy nights in Delaware and the talk show-style showcase "<strong>Chop It Up</strong>." Whether performing live or on screen, Dread Archie Jr. delivers a powerful mix of rhythm, personality, and sharp humor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILMOGRAPHY -->
+    <section id="filmography">
+      <div class="container">
+        <h2>Filmography</h2>
+        <p><strong>Dread Archie Jr.</strong> (also credited as <strong>D.O.A.</strong>) has built a unique career across film, television, and documentary—bringing together his talents as a vocal percussionist, comedian, and actor. Below is a selected list of his film and TV appearances:</p>
+        
+        <h3>Feature Films</h3>
+         <ul> 
+          <li><strong>For Love of the Game (1999)</strong> <em>– Role</em>: Yankee Fan (uncredited)</li>
+          <li><strong>Colorz of Rage (1999)</strong><em>– Role</em>: Dre (credited as D.O.A.)</li>
+        </ul>
+
+        <h3>Television & TV Movies</h3>       
+        <ul>
+          <li><strong>Off the Hook (1999)</strong> – TV Movie <em>– Role</em>: Vocal Percussionist</li>
+          <li><strong>The Lyricist Lounge Show (2000)</strong> – TV Series, Episode #1.4 <em>– Role</em>: Vocal Percussionist</li> 
+          <li><strong>Rhonda Mitchell M.D. (2017)</strong> – TV Series, Episode "Private Parts" <em>– Role</em>: Mr. Littlejohn</li> 
+        </ul>
+
+        <h3>Documentary & “Self” Appearances</h3>
+        <ul>
+          <li><strong>Breath Control: The History of the Human Beat Box (2002)</strong> – Documentary <em>Role</em>: Himself (as D.O.A.)</li> 
+          <li><strong>Scratch (2001)</strong> – Documentary <em>– Role</em>: Himself – MB2000 (as D.O.A.)</li>
+          <li><strong>Jerry Lewis MDA Labor Day Telethon (2000)</strong> – TV Series (one episode) <em>– Role</em>: Vocal Percussionist</li>
+       </ul>
+      </div>
+    </section>
+
+    <!-- SHOWS -->
+    <section id="shows">
+      <div class="container">
+        <div class="section-head">
+          <h2>Upcoming Shows</h2>
+          <div class="button-group">
+            <button class="btn ghost" id="filterAll" aria-pressed="true" type="button">All</button>
+            <button class="btn ghost" id="filterSoon" type="button">Next 60 Days</button>
+          </div>
+        </div>
+        <p class="note">Dates update often — follow on socials for drops and surprise sets.</p>
+        <div id="showsWrap" class="shows-rail"></div>
+      </div>
+    </section>
+
+    <!-- FLYERS -->
+    <section id="flyers">
+      <div class="container">
+        <div class="section-head">
+          <h2>Flyer Gallery</h2>
+          <span class="note">Hover to pause</span>
+        </div>
+        <div class="ticker-shell card">
+          <div id="ticker" class="ticker" aria-label="Scrolling flyer gallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Short Videos</h2>
+          <a class="btn ghost" href="https://www.youtube.com/@dakontrolroom8920" target="_blank" rel="noopener">More on YouTube</a>
+        </div>
+        <p class="note">Quick clips — crowd work, bits, and behind-the-scenes.</p>
+        <div id="videoGrid" class="video-grid"></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter">
+      <div class="container">
+        <div class="section-head">
+          <h2>Mailing List</h2>
+          <span class="note">Be first on drops, tickets, and new clips</span>
+        </div>
+        <div class="card newsletter-card">
+          <div class="newsletter-copy">
+            <h3>Stay in the loop</h3>
+            <p>Join the insiders list to get pre-sale alerts, unreleased clips, and last-minute pop-up shows.</p>
+            <ul class="list-plain">
+              <li>Advance ticket announcements</li>
+              <li>Behind-the-scenes exclusives</li>
+              <li>Occasional giveaways and merch drops</li>
+            </ul>
+          </div>
+          <form id="mailingForm" action="https://formspree.io/f/your-mailing-list-id" method="POST" novalidate>
+            <div class="newsletter-fields">
+              <label class="sr-only" for="mailingName">Name</label>
+              <input class="input" type="text" id="mailingName" name="name" placeholder="Your name">
+              <label class="sr-only" for="mailingEmail">Email</label>
+              <input class="input" type="email" id="mailingEmail" name="email" placeholder="Your email" required>
+            </div>
+            <label class="consent">
+              <input type="checkbox" name="marketing_opt_in" required>
+              <span>Yes, email me about shows, drops, and updates.</span>
+            </label>
+            <button class="btn primary" type="submit">Join the List</button>
+            <p class="form-status" id="mailingStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-bar">
+      <small>© <span id="year"></span> dread archie jr. All rights reserved.</small>
+      <div class="row">
+        <a class="btn ghost" href="https://www.instagram.com/da_kontrol_room_" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="https://www.tiktok.com/@dakontrolroom?lang=en" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn ghost" href="https://www.youtube.com/@dakontrolroom8920" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn ghost" href="https://x.com/archiedread" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://dcartdevelopment.com/dreadarchiejr/assets/Dread_Archie_Jr_EPK.pdf" class="btn primary" target="_blank">Download EPK</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
