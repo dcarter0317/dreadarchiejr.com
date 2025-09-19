@@ -89,10 +89,10 @@
   ];
   const videos = [
     { type: 'iframe', src: 'https://www.youtube.com/embed/T03FJHbVnvY', caption: 'Clip: Acting Reel' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/_SI-rF0-pjU?start=277&end=340', caption: 'Acting: Rhonda MD S1 Ep1 - Private Parts' },
+    { type: 'iframe', src: 'https://www.youtube.com/embed/_SI-rF0-pjU?start=277', caption: 'Acting: Rhonda MD S1 Ep1 - Private Parts' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/-Lqw879_CS8', caption: 'Standup: First show at Danagerfields' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/z0C7y0Ff7F4', caption: 'Commerical work: Wrigleys Winterfresh' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' }
+    { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' } 
   ];
 
   const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
