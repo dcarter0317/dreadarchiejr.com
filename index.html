@@ -20,8 +20,21 @@
 
   <script defer src="js/script.js"></script>
 </head>
-<body class="no-js">
+<body class="no-js intro-active">
   <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+  <div class="intro-splash" id="introSplash" role="dialog" aria-label="Site intro video" aria-modal="true">
+    <div class="intro-shell">
+      <video id="introVideo" class="intro-video" autoplay muted playsinline preload="auto">
+        <source src="assets/videos/dread_intro_video.mp4" type="video/mp4">
+        Your browser does not support the intro video. Skip to the site content below.
+      </video>
+      <div class="intro-overlay" aria-hidden="true">
+        <h1 class="intro-title">Who is<br> Dread Archie Jr.?</h1>
+      </div>
+      <button type="button" class="btn skip-intro" id="skipIntro">Skip Intro</button>
+    </div>
+  </div>
 
   <!-- HEADER / NAV -->
   <header>
@@ -214,7 +227,7 @@
               <li>Occasional giveaways and merch drops</li>
             </ul>
           </div>
-          <form id="mailingForm" action="https://formspree.io/f/your-mailing-list-id" method="POST" novalidate>
+          <form id="mailingForm" action="https://formspree.io/f/xzzjpler" method="POST" novalidate>
             <div class="newsletter-fields">
               <label class="sr-only" for="mailingName">Name</label>
               <input class="input" type="text" id="mailingName" name="name" placeholder="Your name">

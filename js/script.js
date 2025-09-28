@@ -7,6 +7,82 @@
 
   // Progressive enhancement
   document.body.classList.remove('no-js');
+  const introSplash = $('#introSplash');
+  const introVideo = $('#introVideo');
+  const skipIntroBtn = $('#skipIntro');
+  const introOverlay = $('.intro-overlay');
+
+  if (introSplash) {
+    document.body.classList.add('intro-active');
+    let finished = false;
+    let autoCloseTimer = 0;
+    let fadeTimer = 0;
+    let revealTimer = 0;
+
+    const finalize = () => {
+      if (!introSplash.isConnected) return;
+      if (fadeTimer) {
+        window.clearTimeout(fadeTimer);
+        fadeTimer = 0;
+      }
+      if (revealTimer) {
+        window.clearTimeout(revealTimer);
+        revealTimer = 0;
+      }
+      document.body.classList.remove('intro-active');
+      introSplash.remove();
+    };
+
+    const teardown = () => {
+      if (finished) return;
+      finished = true;
+      if (autoCloseTimer) window.clearTimeout(autoCloseTimer);
+      introVideo?.pause();
+      introSplash.setAttribute('aria-hidden', 'true');
+      introSplash.removeAttribute('aria-modal');
+      introSplash.classList.add('hidden');
+      introOverlay?.classList.remove('is-visible');
+
+      if (!revealTimer) {
+        revealTimer = window.setTimeout(() => {
+          document.body.classList.remove('intro-active');
+          revealTimer = 0;
+        }, 150);
+      }
+
+      const onFadeOut = (event) => {
+        if (event.target === introSplash && event.propertyName === 'opacity') {
+          introSplash.removeEventListener('transitionend', onFadeOut);
+          finalize();
+        }
+      };
+      introSplash.addEventListener('transitionend', onFadeOut);
+      fadeTimer = window.setTimeout(() => {
+        introSplash.removeEventListener('transitionend', onFadeOut);
+        finalize();
+      }, 1200);
+    };
+
+    skipIntroBtn?.addEventListener('click', teardown);
+    introVideo?.addEventListener('ended', teardown, { once: true });
+    introVideo?.addEventListener('error', teardown, { once: true });
+
+    const ensurePlayback = () => {
+      if (!introVideo) return;
+      const attempt = introVideo.play();
+      if (attempt && attempt.catch) attempt.catch(() => teardown());
+    };
+
+    autoCloseTimer = window.setTimeout(teardown, 15000);
+    if (introVideo?.readyState >= 2) ensurePlayback();
+    else introVideo?.addEventListener('canplay', ensurePlayback, { once: true });
+
+    window.requestAnimationFrame(() => {
+      introOverlay?.classList.add('is-visible');
+      window.requestAnimationFrame(() => skipIntroBtn?.focus());
+    });
+  }
+
   const yearEl = $('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Local ISO date -> Date (avoid off-by-one)
@@ -73,7 +149,8 @@
   // Data
   const shows = [
     { date: '2025-10-03', city: 'New York, NY', venue: 'Comedy In Harlem', tickets: '#' },
-    { date: '2025-10-17', city: 'New York, NY', venue: 'Miracle Revival Fellowship Tabernacle', tickets: '#' }
+    { date: '2025-10-17', city: 'New York, NY', venue: 'Miracle Revival Fellowship Tabernacle', tickets: '#' },
+    { date: '2025-10-25', city: 'New York, NY', venue: 'Smokes&amp;Jokes Comedy Show', tickets: '#' },
   ];
   const flyers = [
     'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer1.jpg',
@@ -90,10 +167,12 @@
   const videos = [
     { type: 'iframe', src: 'https://www.youtube.com/embed/T03FJHbVnvY', caption: 'Clip: Acting Reel' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/_SI-rF0-pjU?start=277', caption: 'Acting: Rhonda MD S1 Ep1 - Private Parts' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/-Lqw879_CS8', caption: 'Standup: First show at Danagerfields' },
+    { type: 'iframe', src: 'https://www.youtube.com/embed/AZwp3xQbf1k?start=30&end=169', caption: 'Standup: Special Ed' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/z0C7y0Ff7F4', caption: 'Commerical work: Wrigleys Winterfresh' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' } 
+    { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' },
+    { type: 'iframe', src: 'https://www.youtube.com/embed/-Lqw879_CS8?start=286&end=340', caption: 'Standup: First show at Danagerfields' }
   ];
+
 
   const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 
@@ -105,12 +184,11 @@
       const d = parseISODateLocal(s.date);
       const el = document.createElement('article');
       el.className = 'card show';
-      el.innerHTML = `
+      el.innerHTML = `  
         <div class="date"><div>${MONTHS[d.getMonth()]}<small>${d.getDate()}</small></div></div>
         <div class="meta">
           <strong>${s.venue}</strong>
           <span class="where">${s.city} • ${d.getFullYear()}</span>
-          <div class="actions"><a class="btn primary" href="${s.tickets}" target="_blank" rel="noopener">Tickets</a></div>
         </div>`;
       wrap.appendChild(el);
     });

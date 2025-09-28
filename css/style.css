@@ -39,6 +39,7 @@
 /* ---- Base Reset-ish ---- */
 *{ box-sizing:border-box; }
 html, body{ height:100%; }
+html{ scroll-behavior:smooth; }
 body{
   margin:0; background:var(--bg); color:var(--ink);
   font-family:var(--font-body); line-height:1.6;
@@ -49,6 +50,125 @@ a{ color:inherit; text-decoration:none; }
 button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
 .container{ width:min(1200px, 92vw); margin-inline:auto; }
 ::selection{ background:rgba(139,92,246,.28); }
+
+/* ---- Intro Splash ---- */
+body.intro-active{ overflow:hidden; }
+.no-js .intro-splash{ display:none; }
+body.intro-active:not(.no-js) header,
+body.intro-active:not(.no-js) main,
+body.intro-active:not(.no-js) footer{
+  opacity:0;
+  pointer-events:none;
+}
+header, main, footer{
+  opacity:1;
+  transition: opacity .6s var(--ease-1);
+}
+.intro-splash{
+  position:fixed; inset:0; z-index:120;
+  display:flex; align-items:stretch; justify-content:center;
+  background:#000;
+  opacity:1;
+  transition: opacity .6s var(--ease-1);
+}
+.intro-splash.hidden{
+  opacity:0;
+  pointer-events:none;
+}
+.intro-shell{
+  position:relative;
+  flex:1 1 auto;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#000;
+  transition: opacity .6s var(--ease-1), transform .6s var(--ease-1);
+}
+.intro-splash.hidden .intro-shell{
+  opacity:0;
+  transform:scale(.96);
+}
+.intro-video{
+  position:absolute;
+  inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  transition: opacity .6s var(--ease-1);
+  z-index:0;
+}
+.intro-shell::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 100%);
+  pointer-events:none;
+  transition: opacity .6s var(--ease-1);
+  z-index:1;
+}
+.intro-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:0.75rem;
+  padding:clamp(1.5rem, 6vw, 4rem);
+  text-align:center;
+  z-index:2;
+  pointer-events:none;
+  transition: opacity 2.5s ease, transform 1s var(--ease-1);
+  opacity:0;
+  transform:translateY(18px);
+}
+.intro-overlay.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.intro-title{
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:clamp(2.4rem, 6vw, 4.5rem);
+  line-height:1.02;
+  letter-spacing:0.02em;
+  color:#fff;
+  text-shadow:0 18px 42px rgba(0, 0, 0, 0.55);
+}
+.intro-splash.hidden .intro-video,
+.intro-splash.hidden .intro-shell::after{
+  opacity:0;
+}
+.intro-splash.hidden .intro-overlay{
+  opacity:0;
+  transform:translateY(-12px);
+}
+.skip-intro{
+  position:absolute;
+  bottom:clamp(1rem, 3vw, 2rem);
+  right:clamp(1rem, 3vw, 2rem);
+  border:1px solid rgba(233,234,244,.6);
+  background:rgba(15,18,32,.65);
+  color:#fff;
+  backdrop-filter: blur(6px);
+  padding:.75rem 1.4rem;
+  border-radius:999px;
+  font-weight:700;
+  z-index:3;
+}
+.skip-intro:hover{ background:rgba(15,18,32,.8); }
+.skip-intro:focus-visible{ outline:0; box-shadow:0 0 0 4px rgba(34,211,238,.35); }
+
+@media (max-width: 720px){
+  .intro-title{
+    font-size:clamp(2rem, 10vw, 3rem);
+  }
+  .skip-intro{
+    bottom:clamp(.65rem, 4vw, 1.25rem);
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+  }
+}
 
 /* ---- Buttons ---- */
 .btn{
@@ -376,5 +496,7 @@ footer{ padding:36px 0; border-top:1px solid var(--line); color:var(--muted); }
 
 /* ---- Reduced Motion ---- */
 @media (prefers-reduced-motion: reduce){
+  header, main, footer{ transition:none; }
+  html{ scroll-behavior:auto; }
   .layer, .show, .video-card, .mobile-drawer, .mobile-sheet{ animation:none !important; transition:none !important; }
 }
