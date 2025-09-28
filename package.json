@@ -1,0 +1,23 @@
+{
+  "name": "dreadarchiejr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcarter0317/dreadarchiejr.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcarter0317/dreadarchiejr.com/issues"
+  },
+  "homepage": "https://github.com/dcarter0317/dreadarchiejr.com#readme",
+  "description": "",
+  "dependencies": {
+    "playwright": "^1.55.1"
+  }
+}
