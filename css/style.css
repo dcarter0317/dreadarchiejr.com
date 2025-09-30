@@ -162,6 +162,10 @@ header, main, footer{
   .intro-title{
     font-size:clamp(2rem, 10vw, 3rem);
   }
+  .intro-video{
+    transform:scale(.9);
+    transform-origin:center;
+  }
   .skip-intro{
     bottom:clamp(.65rem, 4vw, 1.25rem);
     left:50%;
@@ -500,3 +504,4 @@ footer{ padding:36px 0; border-top:1px solid var(--line); color:var(--muted); }
   html{ scroll-behavior:auto; }
   .layer, .show, .video-card, .mobile-drawer, .mobile-sheet{ animation:none !important; transition:none !important; }
 }
+
