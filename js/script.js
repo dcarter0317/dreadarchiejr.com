@@ -153,16 +153,16 @@
     { date: '2025-10-25', city: 'New York, NY', venue: 'Smokes&amp;Jokes Comedy Show', tickets: '#' },
   ];
   const flyers = [
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer1.jpg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer2.png',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer3.jpeg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer4.png',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer5.jpeg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer6.jpg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer7.jpg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer8.jpg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer9.jpeg',
-    'https://dcartdevelopment.com/dreadarchiejr/assets/imgs/flyer10.png'
+    'https://www.dreadarchiejr.com/assets/imgs/flyer1.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer2.png',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer3.jpeg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer4.png',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer5.jpeg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer6.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer7.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer8.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer9.jpeg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer10.png'
   ];
   const videos = [
     { type: 'iframe', src: 'https://www.youtube.com/embed/T03FJHbVnvY', caption: 'Clip: Acting Reel' },
