@@ -170,7 +170,8 @@
     { type: 'iframe', src: 'https://www.youtube.com/embed/AZwp3xQbf1k?start=30&end=169', caption: 'Standup: Special Ed' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/z0C7y0Ff7F4', caption: 'Commerical work: Wrigleys Winterfresh' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/-Lqw879_CS8?start=286&end=340', caption: 'Standup: First show at Danagerfields' }
+    { type: 'iframe', src: 'https://www.yo340utube.com/embed/-Lqw879_CS8?start=286&end=340', caption: 'Standup: First show at Danagerfields' },
+    { type: 'iframe', src: 'https://www.youtube.com/embed/XUDWusihfRg?list=RDXUDWusihfRg', caption: 'Jerry Lewis Telethon: Dulé Hill Tap Dances To Beat Boxers MB2000' },
   ];
 
 

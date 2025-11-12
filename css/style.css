@@ -472,6 +472,7 @@ textarea{ min-height:130px; resize:vertical; }
 
 /* ---- Footer ---- */
 footer{ padding:36px 0; border-top:1px solid var(--line); color:var(--muted); }
+footer .goldenartists_logo { max-width: 128px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px){
