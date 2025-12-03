@@ -148,9 +148,9 @@
 
   // Data
   const shows = [
-    { date: '2025-12-13', city: 'Jersey City, NJ', venue: 'Brightside Tavern', tickets: '#' },
-    { date: '2025-10-17', city: 'New York, NY', venue: 'Miracle Revival Fellowship Tabernacle', tickets: '#' },
     { date: '2025-10-03', city: 'New York, NY', venue: 'Comedy In Harlem', tickets: '#' },
+    { date: '2025-10-17', city: 'New York, NY', venue: 'Miracle Revival Fellowship Tabernacle', tickets: '#' },
+    { date: '2025-12-13', city: 'Jersey City, NJ', venue: 'Brightside Tavern', tickets: '#' },
   ];
   const flyers = [
     'https://www.dreadarchiejr.com/assets/imgs/flyer1.jpg',
