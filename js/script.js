@@ -167,6 +167,7 @@
   const videos = [
     { type: 'iframe', src: 'https://www.youtube.com/embed/T03FJHbVnvY', caption: 'Clip: Acting Reel' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/_SI-rF0-pjU?start=277', caption: 'Acting: Rhonda MD S1 Ep1 - Private Parts' },
+    { type: 'iframe', src: 'https://www.youtube.com/embed/aJUL6_3hvsQ', caption: 'Standup: Live at Comedy in Harlem' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/AZwp3xQbf1k?start=30&end=169', caption: 'Standup: Special Ed' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/z0C7y0Ff7F4', caption: 'Commerical work: Wrigleys Winterfresh' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' },
