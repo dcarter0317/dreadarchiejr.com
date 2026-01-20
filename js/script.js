@@ -335,7 +335,7 @@
         mailingForm.reset();
       } catch (error) {
         console.error(error);
-        setStatus('Unable to subscribe right now. Please try again or email info@dreadarchiejr.com.', 'error');
+        setStatus('Unable to subscribe right now. Please try again or email dread1220@gmail.com.', 'error');
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
