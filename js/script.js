@@ -148,9 +148,9 @@
 
   // Data
   const shows = [
-    { date: '2025-10-03', city: 'New York, NY', venue: 'Comedy In Harlem', tickets: '#' },
-    { date: '2025-10-17', city: 'New York, NY', venue: 'Miracle Revival Fellowship Tabernacle', tickets: '#' },
-    { date: '2025-12-13', city: 'Jersey City, NJ', venue: 'Brightside Tavern', tickets: '#' },
+    { date: '2026-06-14', city: 'Allentown, PA', venue: 'JetPort Bar & Lounge', tickets: '#' },
+    { date: '2026-07-03', city: 'Staten Island, NY', venue: 'Latin Grooves Bar & Lounge', tickets: '#' },
+    { date: '2026-07-30', city: 'Brooklyn, NY', venue: 'Stellas', tickets: '#' },
   ];
   const flyers = [
     'https://www.dreadarchiejr.com/assets/imgs/flyer1.jpg',
@@ -172,7 +172,6 @@
     { type: 'iframe', src: 'https://www.youtube.com/embed/z0C7y0Ff7F4', caption: 'Commerical work: Wrigleys Winterfresh' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/r0yEOXY7X-o', caption: 'Clip: Breath Control: The History of the Human Beatbox (Trailer)' },
     { type: 'iframe', src: 'https://www.youtube.com/embed/-Lqw879_CS8?start=286&end=340', caption: 'Standup: First show at Danagerfields' },
-    { type: 'iframe', src: 'https://www.youtube.com/embed/XUDWusihfRg?list=RDXUDWusihfRg', caption: 'Jerry Lewis Telethon: Dulé Hill Tap Dances To Beat Boxers MB2000' },
   ];
 
 
