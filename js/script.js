@@ -148,9 +148,7 @@
 
   // Data
   const shows = [
-    { date: '2026-06-14', city: 'Allentown, PA', venue: 'JetPort Bar & Lounge', tickets: '#' },
-    { date: '2026-07-03', city: 'Staten Island, NY', venue: 'Latin Grooves Bar & Lounge', tickets: '#' },
-    { date: '2026-07-30', city: 'Brooklyn, NY', venue: 'Stellas', tickets: '#' },
+    { date: '2026-12-06', city: 'New York, NY', venue: 'Rodneys', tickets: '#' }
   ];
   const flyers = [
     'https://www.dreadarchiejr.com/assets/imgs/flyer1.jpg',
@@ -162,7 +160,9 @@
     'https://www.dreadarchiejr.com/assets/imgs/flyer7.jpg',
     'https://www.dreadarchiejr.com/assets/imgs/flyer8.jpg',
     'https://www.dreadarchiejr.com/assets/imgs/flyer9.jpeg',
-    'https://www.dreadarchiejr.com/assets/imgs/flyer10.png'
+    'https://www.dreadarchiejr.com/assets/imgs/flyer10.png',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer11.jpg'
+  
   ];
   const videos = [
     { type: 'iframe', src: 'https://www.youtube.com/embed/T03FJHbVnvY', caption: 'Clip: Acting Reel' },
