@@ -148,7 +148,8 @@
 
   // Data
   const shows = [
-    { date: '2026-12-06', city: 'New York, NY', venue: 'Rodneys', tickets: '#' }
+    { date: '2026-12-06', city: 'New York, NY', venue: 'Rodneys', tickets: '#' },
+    { date: '2026-10-22', city: 'Abington, PA', venue: 'Crafty Crab Seafood', tickets: '#' }
   ];
   const flyers = [
     'https://www.dreadarchiejr.com/assets/imgs/flyer1.jpg',
@@ -161,7 +162,8 @@
     'https://www.dreadarchiejr.com/assets/imgs/flyer8.jpg',
     'https://www.dreadarchiejr.com/assets/imgs/flyer9.jpeg',
     'https://www.dreadarchiejr.com/assets/imgs/flyer10.png',
-    'https://www.dreadarchiejr.com/assets/imgs/flyer11.jpg'
+    'https://www.dreadarchiejr.com/assets/imgs/flyer11.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer12.jpg'
   
   ];
   const videos = [
