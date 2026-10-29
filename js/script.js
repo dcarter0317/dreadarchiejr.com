@@ -149,6 +149,7 @@
   // Data
   const shows = [
     { date: '2026-12-06', city: 'New York, NY', venue: 'Rodneys', tickets: '#' },
+    { date: '2026-11-28', city: 'Philadelphia, PA', venue: 'Helium Comedy Club', tickets: '#' },
     { date: '2026-10-22', city: 'Abington, PA', venue: 'Crafty Crab Seafood', tickets: '#' }
   ];
   const flyers = [
@@ -163,7 +164,8 @@
     'https://www.dreadarchiejr.com/assets/imgs/flyer9.jpeg',
     'https://www.dreadarchiejr.com/assets/imgs/flyer10.png',
     'https://www.dreadarchiejr.com/assets/imgs/flyer11.jpg',
-    'https://www.dreadarchiejr.com/assets/imgs/flyer12.jpg'
+    'https://www.dreadarchiejr.com/assets/imgs/flyer12.jpg',
+    'https://www.dreadarchiejr.com/assets/imgs/flyer13.jpg'
   
   ];
   const videos = [
